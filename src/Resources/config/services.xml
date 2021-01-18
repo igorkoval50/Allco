@@ -9,6 +9,9 @@
         <service id="Allco\Resources\snippet\de_DE\AllcoSnippetFile_de_DE" public="true">
             <tag name="shopware.snippet.file"/>
         </service>
+        <service id="Allco\Resources\snippet\en_GB\AllcoSnippetFile_en_GB" public="true">
+            <tag name="shopware.snippet.file"/>
+        </service>
     </services>
 
 </container>
