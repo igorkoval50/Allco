@@ -15,35 +15,37 @@
      {{ parent() }}
      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
      <script>
-         var swiper = new Swiper('.swiper-container', {
-             // autoplay: {
-             //     delay: 4000,
-             //     disableOnInteraction: false,
-             // },
-             pagination: {
-                 el: '.swiper-pagination',
-                 clickable: true,
-                 renderBullet: function (index, className) {
-                     return '<span class="' + className + '">' + '<span class="bull-text">' + 0 + (index + 1) + '</span>' + '</span>';
+         window.onload = function(){
+             var swiper = new Swiper('.swiper-container', {
+                 // autoplay: {
+                 //     delay: 4000,
+                 //     disableOnInteraction: false,
+                 // },
+                 pagination: {
+                     el: '.swiper-pagination',
+                     clickable: true,
+                     renderBullet: function (index, className) {
+                         return '<span class="' + className + '">' + '<span class="bull-text">' + 0 + (index + 1) + '</span>' + '</span>';
+                     },
                  },
-             },
-         });
+             });
 
-         var swipers = new Swiper('.swiper-containers', {
-             slidesPerView: 1,
-             spaceBetween: 30,
-             pagination: {
-                 el: '.swiper-pagination',
-                 clickable: true,
-                 renderBullet: function (index, className) {
-                     return '<span class="' + className + '">' + '<span class="bull-text">' + (index + 1) + '</span>' + '</span>';
-                 }
-             },
-             navigation: {
-                 nextEl: '.swiper-button-next',
-                 prevEl: '.swiper-button-prev',
-             },
-             loop: true,
-         });
+             var swipers = new Swiper('.swiper-containers', {
+                 slidesPerView: 1,
+                 spaceBetween: 30,
+                 pagination: {
+                     el: '.swiper-pagination',
+                     clickable: true,
+                     renderBullet: function (index, className) {
+                         return '<span class="' + className + '">' + '<span class="bull-text">' + (index + 1) + '</span>' + '</span>';
+                     }
+                 },
+                 navigation: {
+                     nextEl: '.swiper-button-next',
+                     prevEl: '.swiper-button-prev',
+                 },
+                 loop: true,
+             });
+         }
      </script>
  {% endblock %}
