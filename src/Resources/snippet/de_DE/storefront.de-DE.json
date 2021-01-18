@@ -2,6 +2,12 @@
     "footer": {
         "loginInfo": "Sie sind ALLCO Händler?\nHier können Sie sich als Händler einloggen, um Ihre Bestellungen online zu tätigen.",
         "btnText": "ZUM HÄNDLERLOGIN",
+        "footerTopHeadline": "Der ALLCO Newsletter – <br>\n immer auf dem Laufenden",
+        "footerTopSubtitle": "Das Fundament von ALLCO und unserem Erfolg ist unsere Produktqualität. <br> Unser Versprechen: Ob Hund, Katze, Pferd, Fisch oder",
+        "footerTopAdvanceOne": "Lorem ipsum dolor sit",
+        "footerTopAdvanceTwo": "Consetetur sadipscing elitr",
+        "footerTopAdvanceThree": "Nonumy eirmod tempor",
+        "footerFormButton": "ABONNIEREN",
         "hedlineOne": "ZAHLUNGSARTEN",
         "hedlineFour": "HÄNDLER-LOGIN",
         "headlineSecond": "SOCIAL MEDIA",

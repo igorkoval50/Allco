@@ -73,6 +73,7 @@
                          class="footer-column-content collapse js-footer-column-content footer-contact"
                          aria-labelledby="collapseFooterHotlineTitleOne">
                         <div class="footer-column-content-inner">
+                        {% if context.salesChannel.translated.customFields.custom_footer_brands %}
                             {# simplify ID access #}
                             {% set sportsMediaId = context.salesChannel.translated.customFields.custom_footer_brands %}
 
@@ -82,6 +83,7 @@
                             {# extract single media object #}
                             {% set sportsMedia = mediaCollection.get(sportsMediaId) %}
                             <img src="{{ sportsMedia.url }}">
+                        {% endif %}
                         </div>
                     </div>
                 </div>
