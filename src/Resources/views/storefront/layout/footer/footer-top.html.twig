@@ -1,0 +1,80 @@
+<div class="footer-top-wrapper">
+    <div class="footer-top"  {% if context.salesChannel.translated.customFields.custom_footer_background %}
+            {% set sportsMediaId1 = context.salesChannel.translated.customFields.custom_footer_background %}
+            {% set mediaCollection1 = searchMedia([sportsMediaId1], context.context) %}
+            {% set sportsMedia1 = mediaCollection1.get(sportsMediaId1) %}
+        style="background-image: url({{ sportsMedia1.url }});"
+            {% endif %}>
+        <div class="footer-top-content">
+            <h2>{{ 'footer.footerTopHeadline'|trans|sw_sanitize }}</h2>
+            <p class="subtitle">{{ 'footer.footerTopSubtitle'|trans|sw_sanitize }}</p>
+            <div class="advances">
+                <div class="advance">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.809" height="31.809" viewBox="0 0 31.809 31.809">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect width="31.809" height="31.809" fill="none"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Повторяющаяся_сетка_4" data-name="Повторяющаяся сетка 4" clip-path="url(#clip-path)">
+                            <g transform="translate(-210.928 -5747.928)">
+                                <path id="np_check_3496109_000000" d="M20.072,35.977A15.9,15.9,0,1,0,8.826,31.319a15.908,15.908,0,0,0,11.247,4.658ZM11.816,20.491a1.447,1.447,0,0,1,2.039,0l3.326,3.326,8.372-8.372a1.446,1.446,0,0,1,2.039,2.039l-9.4,9.4h0a1.445,1.445,0,0,1-2.039,0l-4.338-4.338a1.448,1.448,0,0,1,0-2.054Z" transform="translate(206.76 5743.76)" fill="#363a44"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p>{{ 'footer.footerTopAdvanceOne'|trans|sw_sanitize }}</p>
+                </div>
+                <div class="advance">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.809" height="31.809" viewBox="0 0 31.809 31.809">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect width="31.809" height="31.809" fill="none"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Повторяющаяся_сетка_4" data-name="Повторяющаяся сетка 4" clip-path="url(#clip-path)">
+                            <g transform="translate(-210.928 -5747.928)">
+                                <path id="np_check_3496109_000000" d="M20.072,35.977A15.9,15.9,0,1,0,8.826,31.319a15.908,15.908,0,0,0,11.247,4.658ZM11.816,20.491a1.447,1.447,0,0,1,2.039,0l3.326,3.326,8.372-8.372a1.446,1.446,0,0,1,2.039,2.039l-9.4,9.4h0a1.445,1.445,0,0,1-2.039,0l-4.338-4.338a1.448,1.448,0,0,1,0-2.054Z" transform="translate(206.76 5743.76)" fill="#363a44"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p>{{ 'footer.footerTopAdvanceTwo'|trans|sw_sanitize }}</p>
+                </div>
+                <div class="advance">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.809" height="31.809" viewBox="0 0 31.809 31.809">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect width="31.809" height="31.809" fill="none"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Повторяющаяся_сетка_4" data-name="Повторяющаяся сетка 4" clip-path="url(#clip-path)">
+                            <g transform="translate(-210.928 -5747.928)">
+                                <path id="np_check_3496109_000000" d="M20.072,35.977A15.9,15.9,0,1,0,8.826,31.319a15.908,15.908,0,0,0,11.247,4.658ZM11.816,20.491a1.447,1.447,0,0,1,2.039,0l3.326,3.326,8.372-8.372a1.446,1.446,0,0,1,2.039,2.039l-9.4,9.4h0a1.445,1.445,0,0,1-2.039,0l-4.338-4.338a1.448,1.448,0,0,1,0-2.054Z" transform="translate(206.76 5743.76)" fill="#363a44"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p>{{ 'footer.footerTopAdvanceThree'|trans|sw_sanitize }}</p>
+                </div>
+            </div>
+            <div class="form-newsletter">
+                <form action="#">
+                    <input type="text" class="newsletter-input" placeholder="email@provider.de">
+                    <div class="form-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28.276" height="20" viewBox="0 0 28.276 20">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <rect width="28.276" height="20" fill="none"/>
+                                </clipPath>
+                            </defs>
+                            <g id="Повторяющаяся_сетка_4" data-name="Повторяющаяся сетка 4" clip-path="url(#clip-path)">
+                                <g transform="translate(-505.862 -5875)">
+                                    <path id="np_mail_1707180_000000" d="M11.759,21A2.8,2.8,0,0,0,9,23.834V38.155A2.814,2.814,0,0,0,11.759,41H34.517a2.814,2.814,0,0,0,2.759-2.845V23.834A2.8,2.8,0,0,0,34.517,21Zm0,1.379H34.517a1.358,1.358,0,0,1,.571.14l-11.1,10.539a1.155,1.155,0,0,1-1.681,0L11.187,22.519a1.358,1.358,0,0,1,.571-.14ZM10.4,23.672l7.855,7.446L10.53,38.834a1.555,1.555,0,0,1-.151-.679V23.834a1.557,1.557,0,0,1,.022-.162Zm25.474,0a1.556,1.556,0,0,1,.022.162V38.155a1.555,1.555,0,0,1-.151.668l-7.7-7.715Zm-8.836,8.394,7.543,7.554H11.7l7.554-7.543,2.1,1.983a2.6,2.6,0,0,0,3.578,0Z" transform="translate(496.862 5854)" fill="#fff2e6"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <span>{{ 'footer.footerFormButton'|trans|sw_sanitize }}</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
