@@ -1,8 +1,12 @@
 .footer-main {
   background: $footer;
+  .footer-bottom {
+    padding: 0;
+  }
   .container {
     max-width: 1300px;
     padding: 0;
+    overflow: hidden;
   }
   .footer-columns {
     margin-top: 180px;
