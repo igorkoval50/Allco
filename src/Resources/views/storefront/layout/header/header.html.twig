@@ -1,2 +1,8 @@
 {% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
 
+{% block layout_header_navigation %}
+    <div class="d-block d-md-block d-lg-none">
+        {{ parent() }}
+    </div>
+{% endblock %}
+
