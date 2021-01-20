@@ -2,7 +2,7 @@
 
 {% block layout_main_navigation %}
 
-    <div class="main-navigation"
+    <div class="main-navigation d-none d-lg-block"
          id="mainNavigation"
          data-flyout-menu="true">
         {% block layout_main_navigation_navbar %}
@@ -93,7 +93,7 @@
                                 {% endfor %}
                             </div>
                             {% block layout_header_search %}
-                                <div class="col-12 order-2 col-sm order-sm-1 header-search-col">
+                                <div class="col-12 order-2 col-sm order-sm-1 header-search-col collapse" id="collapseExample">
                                     <div class="row">
                                         <div class="col-sm-auto d-none d-sm-block d-lg-none">
                                             {% block layout_header_navigation_toggle_tablet %}
@@ -120,6 +120,20 @@
 
                             {% block layout_header_actions %}
                                 <div class="col-12 order-1 col-sm-auto order-sm-2 header-actions-col">
+                                    <button class="searc-svg" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.738" height="21.659" viewBox="0 0 21.738 21.659">
+                                            <defs>
+                                                <clipPath id="clip-path">
+                                                    <rect width="21.738" height="21.659" fill="none"/>
+                                                </clipPath>
+                                            </defs>
+                                            <g id="Повторяющаяся_сетка_8" data-name="Повторяющаяся сетка 8" clip-path="url(#clip-path)">
+                                                <g transform="translate(-1343.941 -118.591)">
+                                                    <path id="Контур_9" data-name="Контур 9" d="M159.6,360.659a1.055,1.055,0,0,1-.748-.31l-5.7-5.7a8.473,8.473,0,1,1,1.5-1.5l5.7,5.7a1.058,1.058,0,0,1-.748,1.806Zm-11.638-19.043a6.348,6.348,0,1,0,6.348,6.348A6.354,6.354,0,0,0,147.964,341.616Z" transform="translate(1204.691 -220.659)" fill="#fff" stroke="#879200" stroke-width="0.5"/>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </button>
                                     <div class="row no-gutters">
                                         {% block layout_header_navigation_toggle %}
                                             <div class="col d-sm-none">
