@@ -1,4 +1,10 @@
 {
+    "header": {
+        "best": "Beste Qualität für Ihre Tiere",
+        "phone": "+49 (0)4233 93 20 40",
+        "delivery": "Kostenloser Versand innerhalb Deutschlands ab 19 €",
+        "map": "Händlersuche"
+    },
     "footer": {
         "loginInfo": "Sie sind ALLCO Händler?\nHier können Sie sich als Händler einloggen, um Ihre Bestellungen online zu tätigen.",
         "btnText": "ZUM HÄNDLERLOGIN",

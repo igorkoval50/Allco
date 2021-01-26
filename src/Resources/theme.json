@@ -3,8 +3,8 @@
   "author": "Shopware AG",
   "views": [
      "@Storefront",
-     "@Plugins",
-     "@Allco"
+     "@Allco",
+    "@Plugins"
   ],
   "style": [
     "app/storefront/src/scss/overrides.scss",

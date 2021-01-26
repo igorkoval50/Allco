@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/layout/header/actions/cart-widget.html.twig' %}
+{% block layout_header_actions_cart_widget %}
+    <span class="header-cart-icon">
+    <i>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.643" height="20.583" viewBox="0 0 17.643 20.583">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="17.643" height="20.583" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Повторяющаяся_сетка_6" data-name="Повторяющаяся сетка 6" clip-path="url(#clip-path)">
+    <g transform="translate(-1422.695 -117.436)">
+      <path id="Basket" d="M1804.381,34.73a.636.636,0,0,0-.628-.585h-3.15V32.858a3.782,3.782,0,1,0-7.561,0v1.286h-3.151a.635.635,0,0,0-.627.585L1788,48.881a.65.65,0,0,0,.162.492.624.624,0,0,0,.465.209h16.384a.626.626,0,0,0,.465-.209.649.649,0,0,0,.162-.492Zm-10.08-1.872a2.521,2.521,0,1,1,5.041,0v1.286H1794.3ZM1789.32,48.3l1.145-12.865h2.576V36.9a1.26,1.26,0,1,0,1.26,0V35.431h5.041V36.9a1.26,1.26,0,1,0,1.26,0V35.431h2.575l1.146,12.865Z" transform="translate(-365.305 88.437)" fill="#7b7b7b"/>
+    </g>
+  </g>
+</svg>
+    </i>
+
+    </span>
+    {% if page.cart.lineItems|length > 0 %}
+        <span class="badge badge-primary header-cart-badge">{{ page.cart.lineItems|length }}</span>
+    {% endif %}
+    <span class="header-cart-total">
+        {{ page.cart.price.positionPrice|currency }}{{ "general.star"|trans|sw_sanitize }}
+    </span>
+{% endblock %}

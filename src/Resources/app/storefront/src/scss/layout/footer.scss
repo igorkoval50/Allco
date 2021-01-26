@@ -6,7 +6,7 @@
   .container {
     max-width: 1300px;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
   }
   .footer-columns {
     margin-top: 180px;
@@ -48,7 +48,7 @@
       width: 100%;
       display: block;
       height: 1px;
-      background: $white;
+      background: #95989A;
       top: 50%;
       transform: translate(0, -50%);
       z-index: 1;
@@ -101,8 +101,9 @@
     color: $border;
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
     line-height: 21px;
+    margin-bottom: 0;
   }
 }
 .footer-top-wrapper {
@@ -181,5 +182,11 @@
         margin-left: 10px;
       }
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-columns {
+    border-bottom: none;
   }
 }

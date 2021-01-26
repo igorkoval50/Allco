@@ -1,0 +1,37 @@
+{% sw_extends '@Storefront/storefront/layout/header/actions/account-widget.html.twig' %}
+
+{% block layout_header_actions_account_widget %}
+    <div class="dropdown">
+        {% block layout_header_actions_account_widget_dropdown_button %}
+            <button class="btn account-menu-btn header-actions-btn"
+                    type="button"
+                    id="accountWidget"
+                    data-offcanvas-account-menu="true"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="{{ "account.myAccount"|trans|striptags }}"
+                    title="{{ "account.myAccount"|trans|striptags }}">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17.494" height="19.826" viewBox="0 0 17.494 19.826">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect width="17.494" height="19.826" fill="none"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Повторяющаяся_сетка_5" data-name="Повторяющаяся сетка 5" clip-path="url(#clip-path)">
+                            <g transform="translate(-1384.791 -118.478)">
+                                <path id="np_user_3255977_000000" d="M28.747,25.33A8.757,8.757,0,0,0,20,34.077v1.749H37.494V34.077a8.757,8.757,0,0,0-8.747-8.747Zm7.581,9.33H21.166v-.583a7.581,7.581,0,0,1,15.161,0Zm-7.581-10.5a4.082,4.082,0,1,0-4.082-4.082,4.082,4.082,0,0,0,4.082,4.082Zm0-7a2.916,2.916,0,1,1-2.916,2.916,2.916,2.916,0,0,1,2.916-2.916Z" transform="translate(1364.791 102.478)" fill="#7b7b7b"/>
+                            </g>
+                        </g>
+                    </svg>
+
+                </i>
+            </button>
+        {% endblock %}
+
+        {% block layout_header_actions_account_widget_dropdown_menu %}
+           {{ parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -26,3 +26,13 @@ $nav: #181C28;
     opacity: .8;
   }
 }
+
+svg * {
+  clip-path: none;
+}
+.social {
+  a:hover {
+    color: #003e44;
+    text-decoration: none;
+  }
+}

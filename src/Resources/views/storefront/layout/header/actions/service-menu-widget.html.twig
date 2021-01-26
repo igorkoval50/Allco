@@ -1,0 +1,86 @@
+{% sw_extends '@Storefront/storefront/layout/header/actions/service-menu-widget.html.twig' %}
+
+{% block layout_header_actions_service_menu_widget %}
+    {% if position is empty %}
+        {% set position = 'top-bar' %}
+    {% endif %}
+
+    {% if page.header.serviceMenu|length > 0 %}
+        <div class="top-bar-nav-item top-bar-menu">
+            {% block layout_header_actions_service_menu_list %}
+                <div class="service-menu dropdown">
+                    <button class="btn dropdown-toggle top-bar-nav-btn"
+                            type="button"
+                            id="serviceMenuDropdown-{{ position }}"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                       <i>
+                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14.623" height="8.814" viewBox="0 0 14.623 8.814">
+                               <defs>
+                                   <clipPath id="clip-path">
+                                       <rect width="14.623" height="8.814" fill="none"/>
+                                   </clipPath>
+                               </defs>
+                               <g id="Повторяющаяся_сетка_8" data-name="Повторяющаяся сетка 8" clip-path="url(#clip-path)">
+                                   <g transform="translate(-1227.564 -30.855)">
+                                       <path id="np_chevron_2623544_000000" d="M42.637,28.055l-5.72,5.72A1,1,0,0,1,35.5,32.36l5.012-5.012L35.5,22.335a1,1,0,0,1,1.416-1.416l5.72,5.72a1,1,0,0,1,0,1.416Z" transform="translate(1262.223 -3.762) rotate(90)" fill="#757881" stroke="#f7f7f7" stroke-width="1"/>
+                                   </g>
+                               </g>
+                           </svg>
+                       </i>
+                        <span class="top-bar-nav-text">{{ "header.indexLinkService"|trans|sw_sanitize }}</span>
+                    </button>
+                    {% block layout_header_actions_service_menu_items %}
+                      {{ parent() }}
+                        <span class="top-bar-nav-text top-bar-nav-text-right">
+                            <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14.673" height="20.177" viewBox="0 0 14.673 20.177">
+                              <defs>
+                                <clipPath id="clip-path">
+                                  <rect width="14.673" height="20.177" fill="none"/>
+                                </clipPath>
+                                <clipPath id="clip-path-6">
+                                  <rect width="6.419" height="6.421" fill="none"/>
+                                </clipPath>
+                              </defs>
+                              <g id="Повторяющаяся_сетка_17" data-name="Повторяющаяся сетка 17" clip-path="url(#clip-path)">
+                                <g transform="translate(-1354.32 -23.675)">
+                                  <g id="Повторяющаяся_сетка_8" data-name="Повторяющаяся сетка 8" transform="translate(1354.32 23.675)" clip-path="url(#clip-path)">
+                                    <g transform="translate(-1354.32 -23.675)">
+                                      <g id="Повторяющаяся_сетка_10" data-name="Повторяющаяся сетка 10" transform="translate(1354.32 23.675)" clip-path="url(#clip-path)">
+                                        <g transform="translate(-1354.32 -23.675)">
+                                          <g id="Повторяющаяся_сетка_15" data-name="Повторяющаяся сетка 15" transform="translate(1354.32 23.675)" clip-path="url(#clip-path)">
+                                            <g transform="translate(-1354.32 -23.675)">
+                                              <g id="Повторяющаяся_сетка_16" data-name="Повторяющаяся сетка 16" transform="translate(1354.32 23.675)" clip-path="url(#clip-path)">
+                                                <g transform="translate(-1354.32 -23.675)">
+                                                  <path id="Контур_26207" data-name="Контур 26207" d="M24,4.164A7.343,7.343,0,0,0,16.664,11.5c0,2.942,1.781,6.079,3.525,8.52a36.862,36.862,0,0,0,3.488,4.186h0a.459.459,0,0,0,.648,0,36.866,36.866,0,0,0,3.488-4.186c1.744-2.441,3.523-5.577,3.523-8.52A7.343,7.343,0,0,0,24,4.165Zm0,.917a6.413,6.413,0,0,1,6.42,6.42c0,2.56-1.658,5.613-3.353,7.987A29.463,29.463,0,0,1,24,23.169a29.59,29.59,0,0,1-3.065-3.681c-1.7-2.374-3.355-5.427-3.355-7.987A6.413,6.413,0,0,1,24,5.081Z" transform="translate(1337.656 19.511)" fill="#757881"/>
+                                                </g>
+                                              </g>
+                                            </g>
+                                          </g>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </g>
+                                  <g id="Повторяющаяся_сетка_9" data-name="Повторяющаяся сетка 9" transform="translate(1358.448 27.801)" clip-path="url(#clip-path-6)">
+                                    <g transform="translate(-1358.448 -27.801)">
+                                      <g id="Повторяющаяся_сетка_14" data-name="Повторяющаяся сетка 14" transform="translate(1358.448 27.801)" clip-path="url(#clip-path-6)">
+                                        <g transform="translate(-1358.448 -27.801)">
+                                          <path id="Контур_26208" data-name="Контур 26208" d="M38.627,22.91a3.21,3.21,0,1,0,3.21,3.21,3.216,3.216,0,0,0-3.21-3.21Zm0,.917a2.293,2.293,0,1,1-2.291,2.293A2.286,2.286,0,0,1,38.627,23.827Z" transform="translate(1323.03 4.891)" fill="#757881"/>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                            </svg>
+                            </i>
+                            {{ 'header.map'|trans }}
+                        </span>
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        </div>
+    {% endif %}
+{% endblock %}

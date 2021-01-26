@@ -2,6 +2,9 @@
   position: relative;
   display: flex;
   align-items: center;
+  .header-cart-total {
+    display: none;
+  }
 
   @media (min-width: 1400px) {
     .container, .cms-section .boxed {
@@ -24,6 +27,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 8px;
   }
   @media (min-width: 991px) {
     .main-navigation-menu {
@@ -57,5 +61,97 @@
 body {
   .main-navigation-link.active .main-navigation-link-text {
     border-color: $green;
+  }
+}
+
+.is-act-home {
+  .breadcrumb {
+    display: none;
+  }
+}
+
+.top-info {
+  padding-top: 7px;
+  .first-svg {
+    top: -2px;
+    position: relative;
+  }
+  i {
+    margin-right: 3px;
+    position: relative;
+  }
+  span {
+    font-size: 13px;
+    margin-right: 20px;
+  }
+}
+
+.header-main {
+  min-height: 86px;
+  background: $grey;
+  display: flex;
+  align-items: center;
+  .container {
+    padding: 0;
+    max-width: 1317px;
+  }
+}
+
+#serviceMenuDropdown-top-bar {
+  i {
+    position: relative;
+    top: 0;
+    left: -1px;
+  }
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.top-bar-nav-text {
+  font-size: 13px;
+}
+
+.container-main {
+  padding-top: 0;
+}
+
+.main-navigation-menu {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.header-cart-btn, .account-menu-btn {
+  padding: 0 8px;
+}
+
+@media (min-width: 991px) {
+  .main-navigation .header-search-col {
+    bottom: 2px;
+  }
+  .header-search {
+    position: relative;
+    background: $white;
+    z-index: 10;
+  }
+}
+.account-menu-btn {
+  i {
+    position: relative;
+    top: -1px;
+  }
+}
+
+.header-cart-icon {
+  position: relative;
+  top: -2px;
+}
+.top-bar-nav-text-right {
+  margin-left: 30px;
+  i {
+    margin-right: 3px;
+    position: relative;
+    top: -1px;
+
   }
 }
