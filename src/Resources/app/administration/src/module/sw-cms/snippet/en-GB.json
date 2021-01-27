@@ -1,6 +1,11 @@
 {
     "sw-cms": {
         "blocks": {
+            "text": {
+                "headline": {
+                    "label": "Headline product slider"
+                }
+            },
             "imageText": {
                 "imageTextReversed": {
                     "label": "Two columns text & image"
