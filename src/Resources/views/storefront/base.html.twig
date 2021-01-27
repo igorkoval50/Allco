@@ -56,6 +56,9 @@
                  },
                  loop: true,
              });
+
+
+             //Footer brands element
              var swiperBrands = new Swiper('.swiper-container-brands', {
                  slidesPerView: 5,
                  spaceBetween: 30,
@@ -65,14 +68,39 @@
                      prevEl: '.swiper-button-prev',
                  },
              });
+
+
              const swiperPrev = document.getElementById('swiperPrev');
-             const swiperNext = document.getElementById('swiperNext')
-;
+             const swiperNext = document.getElementById('swiperNext');
+
              swiperPrev.addEventListener('click', () => {
                  swiperBrands.slidePrev();
              });
+
              swiperNext.addEventListener('click', () => {
                  swiperBrands.slideNext();
+             });
+
+            //Layout brands element
+
+             var swiperBrandsElement = new Swiper('.swiper-container-brands-element', {
+                 slidesPerView: 5,
+                 spaceBetween: 30,
+                 freeMode: true,
+                 navigation: {
+                     nextEl: '.swiper-button-next',
+                     prevEl: '.swiper-button-prev',
+                 },
+             });
+
+             const swiperPrevTwo = document.getElementById('swiperPrevTwo');
+             const swiperNextTwo = document.getElementById('swiperNextTwo');
+
+             swiperPrevTwo.addEventListener('click', () => {
+                 swiperBrandsElement.slidePrev();
+             });
+             swiperNextTwo.addEventListener('click', () => {
+                 swiperBrandsElement.slideNext();
              });
          }
      </script>

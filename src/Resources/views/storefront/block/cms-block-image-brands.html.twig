@@ -16,7 +16,7 @@
         <div class="col-sm-12">
         <div class="wrapper-container-brands">
             <!-- Swiper -->
-            <div class="swiper-container-brands">
+            <div class="swiper-container-brands-element">
                 <div class="swiper-wrapper">
                     {% for brand in page.footer.extensions.allco_brands.all() %}
                         {% if brand.mediaUrl %}
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="swiper-navigation">
-                    <span id="swiperPrev">
+                    <span class="swiper-prev" id="swiperPrevTwo">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.759" height="42.615" viewBox="0 0 25.759 42.615">
                             <defs>
                                 <clipPath id="clip-path">
@@ -43,7 +43,7 @@
                         </svg>
 
                     </span>
-                <span id="swiperNext">
+                <span class="swiper-next" id="swiperNextTwo">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.759" height="42.615" viewBox="0 0 25.759 42.615">
                             <defs>
                                 <clipPath id="clip-path">

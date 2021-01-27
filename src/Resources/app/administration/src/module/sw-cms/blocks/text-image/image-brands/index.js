@@ -15,19 +15,6 @@ Shopware.Service('cmsService').registerCmsBlock({
         sizingMode: 'boxed'
     },
     slots: {
-        left: {
-            type: 'image',
-            default: {
-                config: {
-                    displayMode: { source: 'static', value: 'standard' }
-                },
-                data: {
-                    media: {
-                        url: '/allco/static/img/cms/brands-slider.jpg'
-                    }
-                }
-            }
-        },
         right: {
             type: 'text',
             default: {
