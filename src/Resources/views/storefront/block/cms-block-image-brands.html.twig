@@ -1,0 +1,66 @@
+{% block block_image_brands %}
+    {% set columns = 2 %}
+    {% set id = element.id %}
+
+    {% block block_image_text_right %}
+        {% set element = block.slots.getSlot('right') %}
+
+        <div class="col-sm-12 text-element" data-cms-element-id="{{ id }}">
+            {% block block_image_text_right_inner %}
+                {% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+
+    {% block block_image_text_left %}
+        <div class="col-sm-12">
+        <div class="wrapper-container-brands">
+            <!-- Swiper -->
+            <div class="swiper-container-brands">
+                <div class="swiper-wrapper">
+                    {% for brand in page.footer.extensions.allco_brands.all() %}
+                        {% if brand.mediaUrl %}
+                            <div class="swiper-slide">
+                                <img src="{{ brand.mediaUrl }}" alt="image">
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="swiper-navigation">
+                    <span id="swiperPrev">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.759" height="42.615" viewBox="0 0 25.759 42.615">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <rect width="25.759" height="42.615" fill="none"/>
+                                </clipPath>
+                            </defs>
+                            <g id="Повторяющаяся_сетка_4" data-name="Повторяющаяся сетка 4" clip-path="url(#clip-path)">
+                                <g transform="translate(-55.996 -6474)">
+                                    <path id="np_chevron_2623544_000000" d="M57.1,42.521,40.244,59.379a2.95,2.95,0,0,1-4.172-4.172L50.844,40.434,36.072,25.663a2.95,2.95,0,1,1,4.172-4.172L57.1,38.348a2.948,2.948,0,0,1,0,4.172Z" transform="translate(115.463 6535.742) rotate(180)" fill="#fff" stroke="#363a44" stroke-width="3" opacity="0.487"/>
+                                </g>
+                            </g>
+                        </svg>
+
+                    </span>
+                <span id="swiperNext">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.759" height="42.615" viewBox="0 0 25.759 42.615">
+                            <defs>
+                                <clipPath id="clip-path">
+                                    <rect width="25.759" height="42.615" fill="none"/>
+                                </clipPath>
+                            </defs>
+                            <g id="Повторяющаяся_сетка_5" data-name="Повторяющаяся сетка 5" clip-path="url(#clip-path)">
+                                <g transform="translate(-1517.996 -6474)">
+                                    <path id="np_chevron_2623544_000000" d="M57.1,42.521,40.244,59.379a2.95,2.95,0,0,1-4.172-4.172L50.844,40.434,36.072,25.663a2.95,2.95,0,1,1,4.172-4.172L57.1,38.348a2.948,2.948,0,0,1,0,4.172Z" transform="translate(1484.288 6454.873)" fill="#fff" stroke="#363a44" stroke-width="3" opacity="0.487"/>
+                                </g>
+                            </g>
+                        </svg>
+
+                    </span>
+            </div>
+        </div>
+        </div>
+    {% endblock %}
+
+{% endblock %}

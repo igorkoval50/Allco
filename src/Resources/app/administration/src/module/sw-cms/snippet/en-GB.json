@@ -7,6 +7,9 @@
                 },
                 "imageTextCustom": {
                     "label": "Two columns image & text"
+                },
+                "brands": {
+                    "label": "brands image slider"
                 }
             }
         }
