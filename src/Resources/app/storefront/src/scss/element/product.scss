@@ -80,6 +80,9 @@
     font-family: "Lato", sans-serif;
     line-height: 25px;
     color: $primary;
+    margin-bottom: 15px;
+    max-height: 44px;
+    height: auto;
   }
   .product-description {
     font-size: 15px;
@@ -119,6 +122,9 @@
   .product-price-unit, .product-variant-characteristics, .product-rating {
     display: none;
   }
+  .product-price-info {
+    margin-bottom: 25px;
+  }
 }
 
 .cms-element-product-slider {
@@ -132,12 +138,12 @@
 }
 
 .product-slider {
-  max-width: 1396px;
+  max-width: 1436px;
   margin: 0 auto;
 }
 
 .product-slider.has-nav {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
