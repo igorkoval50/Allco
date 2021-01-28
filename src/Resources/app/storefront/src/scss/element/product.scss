@@ -153,3 +153,33 @@
     padding-top: 80px;
     background: #f7f7f7;
 }
+
+.page-item, .sorting {
+    background-color: transparent;
+}
+
+.cms-element-product-listing {
+    .cms-listing-col {
+        margin-bottom: 15px;
+    }
+}
+.custom-listing {
+    .cms-element-sidebar-filter {
+        margin-left: -20px;
+    }
+    .page-item.active .page-link{
+        background: $white;
+        color: $green;
+        border-color: #bcc1c7;
+    }
+    .page-item.disabled {
+        background: transparent;
+    }
+    .page-link {
+        color: $primary;
+    }
+    .filter-panel-item .filter-panel-item-toggle {
+        font-weight: bold;
+    }
+}
+
