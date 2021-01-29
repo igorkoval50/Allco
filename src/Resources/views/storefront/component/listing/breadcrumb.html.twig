@@ -1,0 +1,37 @@
+{# @deprecated tag:v6.4.0 -  Will be handled by generic "layout/breadcrumb.html.twig" template #}
+{% block component_listing_breadcrumb %}
+    {% if category.translated.customFields.custom_listing_image %}
+        {% set sportsMediaId = category.translated.customFields.custom_listing_image %}
+        {% set mediaCollection = searchMedia([sportsMediaId], context.context) %}
+        {% set sportsMedia = mediaCollection.get(sportsMediaId) %}
+
+        <div class="row">
+            <div class="category-main-image col-12">
+                <img src="{{ sportsMedia.url }}" alt="">
+            </div>
+        </div>
+    {% endif %}
+
+    {% set breadcrumb = sw_breadcrumb(category) %}
+    {% set breadcrumbKeys = breadcrumb|keys %}
+
+    {% for key, item in breadcrumb %}
+        <div class="breadcrumb-container container">
+            {% block component_listing_breadcrumb_category %}
+                <a class="{% if key is same as(category.id) %} is-active{% endif %}"
+                   href="{{ seoUrl('frontend.navigation.page', { navigationId: key }) }}">
+                    {% block component_listing_breadcrumb_link_name %}
+                        {{ item }}
+                    {% endblock %}
+                </a>
+            {% endblock %}
+            {% block component_listing_breadcrumb_placeholder %}
+                {% if key != breadcrumbKeys|last %}
+                    <div class="breadcrumb-placeholder">
+                        {% sw_icon 'arrow-medium-right' style { 'size': 'fluid', 'pack': 'solid'} %}
+                    </div>
+                {% endif %}
+            {% endblock %}
+        </div>
+    {% endfor %}
+{% endblock %}
