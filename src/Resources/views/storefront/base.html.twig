@@ -11,98 +11,17 @@
 
  {% block base_footer %}
      {% sw_include '@Allco/storefront/layout/footer/footer-top.html.twig' %}
-         <footer class="footer-main">
-             {% block base_footer_inner %}
-                 <div class="container">
-                     {% sw_include '@Storefront/storefront/layout/footer/footer.html.twig' %}
-                 </div>
-             {% endblock %}
-             {% sw_include '@Allco/storefront/layout/footer/footer-bottom.html.twig' %}
-         </footer>
+     <footer class="footer-main">
+         {% block base_footer_inner %}
+             <div class="container">
+                 {% sw_include '@Storefront/storefront/layout/footer/footer.html.twig' %}
+             </div>
+         {% endblock %}
+         {% sw_include '@Allco/storefront/layout/footer/footer-bottom.html.twig' %}
+     </footer>
  {% endblock %}
 
  {% block base_script_hmr_mode %}
+     <template data-swag-allco-swiper-slider></template>
      {{ parent() }}
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-     <script>
-         window.onload = function(){
-             var swiper = new Swiper('.swiper-container', {
-                 // autoplay: {
-                 //     delay: 4000,
-                 //     disableOnInteraction: false,
-                 // },
-                 pagination: {
-                     el: '.swiper-pagination',
-                     clickable: true,
-                     renderBullet: function (index, className) {
-                         return '<span class="' + className + '">' + '<span class="bull-text">' + 0 + (index + 1) + '</span>' + '</span>';
-                     },
-                 },
-             });
-
-             var swipers = new Swiper('.swiper-containers', {
-                 slidesPerView: 1,
-                 spaceBetween: 30,
-                 pagination: {
-                     el: '.swiper-pagination',
-                     clickable: true,
-                     renderBullet: function (index, className) {
-                         return '<span class="' + className + '">' + '<span class="bull-text">' + (index + 1) + '</span>' + '</span>';
-                     }
-                 },
-                 navigation: {
-                     nextEl: '.swiper-button-next',
-                     prevEl: '.swiper-button-prev',
-                 },
-                 loop: true,
-             });
-
-
-             //Footer brands element
-             var swiperBrands = new Swiper('.swiper-container-brands', {
-                 slidesPerView: 5,
-                 spaceBetween: 30,
-                 freeMode: true,
-                 navigation: {
-                     nextEl: '.swiper-button-next',
-                     prevEl: '.swiper-button-prev',
-                 },
-             });
-
-
-             const swiperPrev = document.getElementById('swiperPrev');
-             const swiperNext = document.getElementById('swiperNext');
-
-             swiperPrev.addEventListener('click', () => {
-                 swiperBrands.slidePrev();
-             });
-
-             swiperNext.addEventListener('click', () => {
-                 swiperBrands.slideNext();
-             });
-
-            //Layout brands element
-
-             var swiperBrandsElement = new Swiper('.swiper-container-brands-element', {
-                 slidesPerView: 5,
-                 spaceBetween: 30,
-                 freeMode: true,
-                 navigation: {
-                     nextEl: '.swiper-button-next',
-                     prevEl: '.swiper-button-prev',
-                 },
-             });
-
-             const swiperPrevTwo = document.getElementById('swiperPrevTwo');
-             const swiperNextTwo = document.getElementById('swiperNextTwo');
-
-             swiperPrevTwo.addEventListener('click', () => {
-                 swiperBrandsElement.slidePrev();
-             });
-             swiperNextTwo.addEventListener('click', () => {
-                 swiperBrandsElement.slideNext();
-             });
-
-         };
-     </script>
  {% endblock %}
