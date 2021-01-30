@@ -49,6 +49,14 @@
   .cms-element-product-slider {
     padding-top: 0;
   }
+  .overlay {
+    position: absolute;
+    height: 240px;
+    width: 2000px;
+    left: -300px;
+    background: #F7F7F7;
+    top: -40px;
+  }
 }
 
 //////
@@ -106,9 +114,6 @@
 .cms-element-product-slider {
   .product-price-info {
     margin-top: 0;
-  }
-  .product-name {
-    text-align: center;
   }
   .product-price-unit {
     display: none;
@@ -212,5 +217,85 @@
 @media (max-width: 480px) {
   .gallery-slider-item.is-contain .gallery-slider-image {
     margin-left: 0;
+  }
+}
+
+.product-breadcrumb {
+  .breadcrumb-placeholder {
+    .icon-arrow-medium-right {
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        position: relative;
+        width: 9px;
+        height: 15px;
+        background-image: url(../assets/icons/bread-arrow.svg);
+        right: 0;
+        background-repeat: no-repeat;
+        top: 3px;
+      }
+    }
+  }
+  svg {
+    display: none;
+  }
+   a.is-active {
+    color: #4a545b;
+  }
+}
+
+.product-detail-media {
+  z-index: 10;
+}
+
+.row-benefit {
+  position: relative;
+  top: -122px;
+}
+
+.gallery-slider-thumbnails-image, .gallery-slider-image {
+  object-fit: contain;
+}
+
+.product-detail-content {
+  z-index: 10000;
+  position: relative;
+}
+.modal.zoom-modal {
+  .gallery-slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+}
+
+.product-detail-cross-selling {
+  .card-tabs .card-body {
+    padding-top: 0;
+  }
+  .card-tabs {
+    background: transparent;
+  }
+  .card-tabs {
+    background: #f7f7f7;
+  }
+  .nav-link.active {
+    background: transparent;
+  }
+}
+
+.product-detail-tabs, .product-cross-selling-tab-navigation, .product-detail-cross-selling {
+  position: relative;
+  z-index: 10;
+}
+
+.product-detail-manufacturer-link {
+  width: 240px;
+  height: 114px;
+  display: block;
+  img {
+    min-width: 100%;
+    min-height: 100%;
   }
 }
