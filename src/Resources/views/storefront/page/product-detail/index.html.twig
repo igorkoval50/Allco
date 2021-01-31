@@ -40,7 +40,6 @@
             </div>
         </div>
     {% endif %}
-    {% block page_product_detail %}
 
         <div class="product-detail"
              itemscope
@@ -54,6 +53,14 @@
                         {% block page_product_detail_headline %}
                            {{ parent() }}
                         {% endblock %}
+                    {% block page_product_detail %}
+                        {% if page.product.customFields.custom_detail_subtitle %}
+                            <div class="row">
+                                <div class="product-subtitle">
+                                    <h3>{{ page.product.customFields.custom_detail_subtitle }}</h3>
+                                </div>
+                            </div>
+                        {% endif %}
 
                         {% set mediaItems = page.product.media.media %}
 
