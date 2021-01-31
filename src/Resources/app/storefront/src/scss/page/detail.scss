@@ -4,6 +4,10 @@
   }
 }
 .is-ctl-product {
+  .delivery-information.delivery-available {
+    font-size: 14px;
+    color: #992118;
+  }
   .product-detail-cross-selling {
     .product-detail-tab-navigation-link {
       font-size: 40px;
@@ -81,18 +85,51 @@
     }
   }
   .product-detail-headline {
-    margin-bottom: 25px;
+    margin-bottom: 0;
   }
   .product-detail-price {
     color: #992118;
     font-weight: 300;
     font-size: 50px;
     line-height: 52px;
+    margin-bottom: 20px;
+  }
+  .product-detail-price-unit {
+    .price-unit-label {
+      font-size: 14px;
+    }
+    .price-unit-content {
+      font-size: 14px;
+      font-weight: 300;
+    }
   }
   .product-subtitle {
     width: 100%;
     text-align: center;
-    margin-bottom: 85px;
+    padding-bottom: 60px;
+    padding-top: 25px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url(../assets/icons/bgc.jpg);
+      background-repeat: no-repeat;
+      opacity: .1;
+      left: 50%;
+      transform:translate(-50%, 0);
+      display: block;
+      width: 442px;
+      height: 137px;
+      bottom: 20px;
+    }
+  }
+  .delivery-status-indicator.bg-success {
+    background-color: transparent !important;
+    background-image: url(../assets/icons/car-detail.svg);
+    width: 20px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 0;
   }
   .product-benefit {
     strong {
@@ -110,9 +147,15 @@
     }
   }
   .product-detail-tax {
+    margin-bottom: 0;
     .product-detail-tax-link {
       color: #992118;
+      font-size: 14px;
+      font-weight: 300;
     }
+  }
+  .product-detail-delivery-information {
+    margin-bottom: 10px;
   }
   .product-detail-buy {
     .btn-buy {

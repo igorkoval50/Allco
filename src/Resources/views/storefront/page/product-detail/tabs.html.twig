@@ -8,10 +8,12 @@
                         id="product-detail-tabs"
                         role="tablist">
                         {% block page_product_detail_tabs_navigation_description %}
+                            {% if page.product.translated.description %}
                             {{ parent() }}
+                            {% endif %}
                         {% endblock %}
                         {% block page_product_detail_tabs_navigation_review %}
-                            {% if shopware.config.core.listing.showReview %}
+                            {% if page.product.customFields.custom_detail_ingredients_content %}
                                 <li class="nav-item">
                                     <a class="nav-link {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %} product-detail-tab-navigation-link"
                                        id="review-tab"

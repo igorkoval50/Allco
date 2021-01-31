@@ -1,6 +1,7 @@
 {% sw_extends '@Storefront/storefront/page/product-detail/description.html.twig' %}
 
 {% block utilities_offcanvas_content %}
+    {% if page.product.translated.description %}
     {% block page_product_detail_description_container %}
         <div class="product-detail-description tab-pane-container">
             {% block page_product_detail_description_title %}
@@ -30,4 +31,5 @@
             {% endblock %}
         </div>
     {% endblock %}
+    {% endif %}
 {% endblock %}

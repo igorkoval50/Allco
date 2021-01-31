@@ -115,9 +115,12 @@
                             </div>
                     </div>
                     {% endif %}
+
+                    {% if page.product.translated.description or page.product.customFields.custom_detail_ or page.product.customFields.custom_detail_ingredients_content %}
                    <div class="wrapper-product-detail-tabs">
                        {{ parent() }}
                    </div>
+                    {% endif %}
                 {% endblock %}
 
                 {% block page_product_detail_cross_selling %}
