@@ -1,0 +1,50 @@
+{% block element_images_sliders %}
+    {%  set sliderConfig = element.fieldConfig.elements %}
+    <div class="swiper-container swiper-text-content itDelight-custom-slider">
+        <div class="swiper-wrapper">
+            {% block element_image_slider_alignment %}
+            {% set myVal = 0 %}
+            {% for image in element.config.sliderItems.value %}
+            <div class="swiper-slide">
+                <div class="image-slider-content"
+                                           data-base-slider-container="true">
+                    <img src="{{ image.mediaUrl }}" alt="test">
+                        <div class="content">
+                            {{ image.content|raw }}
+                        </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endblock %}
+        <!-- Add Pagination -->
+        <div class="swiper-button-next">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.759" height="42.615" viewBox="0 0 25.759 42.615">
+                <defs>
+                    <clipPath id="clip-path">
+                        <rect width="25.759" height="42.615" fill="none"/>
+                    </clipPath>
+                </defs>
+                <g id="Повторяющаяся_сетка_4" data-name="Повторяющаяся сетка 4" clip-path="url(#clip-path)">
+                    <g transform="translate(-1517.996 -4087)">
+                        <path id="np_chevron_2623544_000000" d="M57.1,42.521,40.244,59.379a2.95,2.95,0,0,1-4.172-4.172L50.844,40.434,36.072,25.663a2.95,2.95,0,1,1,4.172-4.172L57.1,38.348a2.948,2.948,0,0,1,0,4.172Z" transform="translate(1484.288 4067.873)" fill="#363a44" stroke="#fff" stroke-width="3" opacity="0.487"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="swiper-button-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.759" height="42.615" viewBox="0 0 25.759 42.615">
+                <defs>
+                    <clipPath id="clip-path">
+                        <rect width="25.759" height="42.615" fill="none"/>
+                    </clipPath>
+                </defs>
+                <g id="Повторяющаяся_сетка_5" data-name="Повторяющаяся сетка 5" clip-path="url(#clip-path)">
+                    <g transform="translate(-55.996 -4087)">
+                        <path id="np_chevron_2623544_000000" d="M57.1,42.521,40.244,59.379a2.95,2.95,0,0,1-4.172-4.172L50.844,40.434,36.072,25.663a2.95,2.95,0,1,1,4.172-4.172L57.1,38.348a2.948,2.948,0,0,1,0,4.172Z" transform="translate(115.463 4148.742) rotate(180)" fill="#363a44" stroke="#fff" stroke-width="3" opacity="0.487"/>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+{% endblock %}

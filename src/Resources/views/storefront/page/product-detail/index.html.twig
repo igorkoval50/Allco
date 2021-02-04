@@ -1,0 +1,132 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/index.html.twig' %}
+{% block base_content %}
+    {% if page.product.customFields.custom_detail_image %}
+        {% set sportsMediaId = page.product.customFields.custom_detail_image %}
+        {% set mediaCollection = searchMedia([sportsMediaId], context.context) %}
+        {% set sportsMedia = mediaCollection.get(sportsMediaId) %}
+
+        <div class="row">
+            <div class="detail-main-image col-12">
+                <img src="{{ sportsMedia.url }}" alt="">
+                <div class="svg-icon">
+                    {% block page_product_detail_manufacturer %}
+                        {% if page.product.manufacturer %}
+                            <div class="col-md-auto product-detail-manufacturer">
+                                {% block page_product_detail_manufacturer_inner %}
+                                    {% block page_product_detail_manufacturer_link %}
+                                        <a href="{{ page.product.manufacturer.link }}"
+                                           class="product-detail-manufacturer-link"
+                                           rel="noreferrer noopener"
+                                           target="_blank"
+                                           title="{{ page.product.manufacturer.translated.name }}">
+                                            {% if page.product.manufacturer.media %}
+                                                {% block page_product_detail_manufacturer_logo %}
+                                                    <img src="{{ page.product.manufacturer.media|sw_encode_media_url }}"
+                                                         class="product-detail-manufacturer-logo"
+                                                         alt="{{ page.product.manufacturer.translated.name }}"/>
+                                                {% endblock %}
+                                            {% else %}
+                                                {% block page_product_detail_manufacturer_text %}
+                                                    {{ page.product.manufacturer.translated.name }}
+                                                {% endblock %}
+                                            {% endif %}
+                                        </a>
+                                    {% endblock %}
+                                {% endblock %}
+                            </div>
+                        {% endif %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+        <div class="product-detail"
+             itemscope
+             itemtype="https://schema.org/Product">
+            {% block page_product_detail_inner %}
+                {% block page_product_detail_content %}
+                    <div class="product-detail-content">
+                        {% block page_product_detail_breadcrumb %}
+                          {{ parent() }}
+                        {% endblock %}
+                        {% block page_product_detail_headline %}
+                           {{ parent() }}
+                        {% endblock %}
+                    {% block page_product_detail %}
+                        {% if page.product.customFields.custom_detail_subtitle %}
+                            <div class="row">
+                                <div class="product-subtitle">
+                                    <h3>{{ page.product.customFields.custom_detail_subtitle }}</h3>
+                                </div>
+                            </div>
+                        {% endif %}
+
+                        {% set mediaItems = page.product.media.media %}
+
+                        {% block page_product_detail_main %}
+                            <div class="row product-detail-main">
+                                {% block page_product_detail_media %}
+                                    <div class="col-lg-7 product-detail-media">
+                                        {% if page.product.media %}
+                                            {% sw_include '@Storefront/storefront/element/cms-element-image-gallery.html.twig' with {
+                                                'mediaItems': mediaItems,
+                                                'zoom': false,
+                                                'zoomModal': true,
+                                                'displayMode': 'contain',
+                                                'gutter': 5,
+                                                'minHeight': '430px',
+                                                'navigationArrows': 'outside',
+                                                'navigationDots': '',
+                                                'galleryPosition': 'left',
+                                                'isProduct': true,
+                                                'fallbackImageTitle': page.product.translated.name,
+                                                'startIndexThumbnails': page.product.cover.position + 1,
+                                                'startIndexSlider': page.product.cover.position + 1,
+                                            } %}
+                                        {% endif %}
+                                    </div>
+                                {% endblock %}
+
+                                {% block page_product_detail_buy %}
+                                    <div class="col-lg-5 product-detail-buy">
+                                        {% sw_include '@Storefront/storefront/page/product-detail/buy-widget.html.twig' %}
+                                    </div>
+                                {% endblock %}
+                            </div>
+                            {% if page.product.customFields.custom_detail_benefit %}
+                            <div class="row row-benefit">
+                                <div class="overlay"></div>
+                                <div class="col-lg-7"></div>
+                                <div class="col-lg-5 product-benefit">
+                                    {{ page.product.customFields.custom_detail_benefit|raw }}
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+
+                {% block page_product_detail_tabs %}
+                    {% if page.product.customFields.custom_detail_info %}
+                    <div class="detail-info">
+                            <div class="row container-info">
+                                {{ page.product.customFields.custom_detail_info|raw }}
+                            </div>
+                    </div>
+                    {% endif %}
+
+                    {% if page.product.translated.description or page.product.customFields.custom_detail_ or page.product.customFields.custom_detail_ingredients_content %}
+                   <div class="wrapper-product-detail-tabs">
+                       {{ parent() }}
+                   </div>
+                    {% endif %}
+                {% endblock %}
+
+                {% block page_product_detail_cross_selling %}
+                    {{ parent() }}
+                {% endblock %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}

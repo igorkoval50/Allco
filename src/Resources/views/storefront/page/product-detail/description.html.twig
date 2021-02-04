@@ -1,0 +1,35 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/description.html.twig' %}
+
+{% block utilities_offcanvas_content %}
+    {% if page.product.translated.description %}
+    {% block page_product_detail_description_container %}
+        <div class="product-detail-description tab-pane-container">
+            {% block page_product_detail_description_title %}
+            {% endblock %}
+
+            {% block page_product_detail_description_content %}
+                {% block page_product_detail_description_content_text %}
+                  <div class="row">
+                      <div class="product-detail-description-text col-md-6"
+                           itemprop="description">
+                          {{ page.product.translated.description|raw }}
+                      </div>
+                      <div class="col-md-6 detail-description-image">
+                          {% if page.product.customFields.custom_detail_description_image %}
+                              {% set sportsMediaId = page.product.customFields.custom_detail_description_image %}
+                              {% set mediaCollection = searchMedia([sportsMediaId], context.context) %}
+                              {% set sportsMedia = mediaCollection.get(sportsMediaId) %}
+
+                              <img src="{{ sportsMedia.url }}" alt="">
+                          {% endif %}
+                      </div>
+                  </div>
+                {% endblock %}
+
+                {% block page_product_detail_description_content_properties %}
+                {% endblock %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+    {% endif %}
+{% endblock %}

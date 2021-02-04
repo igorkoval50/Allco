@@ -1,0 +1,117 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
+{% block page_product_detail_tabs_inner %}
+    <div class="card card-tabs">
+        {% block page_product_detail_tabs_navigation %}
+            <div class="card-header product-detail-tab-navigation">
+                {% block page_product_detail_tabs_navigation_container %}
+                    <ul class="nav nav-tabs product-detail-tab-navigation-list"
+                        id="product-detail-tabs"
+                        role="tablist">
+                        {% block page_product_detail_tabs_navigation_description %}
+                            {% if page.product.translated.description %}
+                            {{ parent() }}
+                            {% endif %}
+                        {% endblock %}
+                        {% block page_product_detail_tabs_navigation_review %}
+                            {% if page.product.customFields.custom_detail_ingredients_content %}
+                                <li class="nav-item">
+                                    <a class="nav-link {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %} product-detail-tab-navigation-link"
+                                       id="review-tab"
+                                       data-toggle="tab"
+                                       data-offcanvas-tabs="true"
+                                       href="#review-tab-pane"
+                                       role="tab"
+                                       aria-controls="review-tab-pane"
+                                       aria-selected="true">
+                                        {{ "detail.tabsReview"|trans|sw_sanitize }}
+                                    </a>
+                                </li>
+                            {% endif %}
+
+                            {% if page.product.customFields.custom_detail_ingredients_content %}
+                                <li class="nav-item">
+                                    <a class="nav-link {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %} product-detail-tab-navigation-link"
+                                       id="ingredients-tab"
+                                       data-toggle="tab"
+                                       data-offcanvas-tabs="true"
+                                       href="#ingredients-tab-pane"
+                                       role="tab"
+                                       aria-controls="ingredients-tab"
+                                       aria-selected="true">
+                                        {{ 'detailPage.ingredientsTab'|trans|sw_sanitize }}
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endblock %}
+                    </ul>
+                {% endblock %}
+            </div>
+        {% endblock %}
+
+        {% block page_product_detail_tabs_content %}
+            <div class="product-detail-tabs-content card-body">
+                {% block page_product_detail_tabs_content_container %}
+                    <div class="tab-content">
+                        {% block page_product_detail_tabs_content_description %}
+                           {{ parent() }}
+                        {% endblock %}
+
+                        {% block page_product_detail_tabs_content_review %}
+                            {% if shopware.config.core.listing.showReview %}
+                                <div class="tab-pane fade show {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %}"
+                                     id="review-tab-pane"
+                                     role="tabpanel"
+                                     aria-labelledby="review-tab">
+                                    <div class="product-detail-description tab-pane-container">
+
+                                        <div class="row">
+                                            <div class="product-detail-description-text col-md-6" itemprop="description">
+                                                {{ page.product.customFields.custom_detail_|raw }}
+                                            </div>
+                                            <div class="col-md-6 detail-description-image">
+                                                {% if page.product.customFields.custom_detail_recommendation %}
+                                                    {% set sportsMediaId = page.product.customFields.custom_detail_recommendation %}
+                                                    {% set mediaCollection = searchMedia([sportsMediaId], context.context) %}
+                                                    {% set sportsMedia = mediaCollection.get(sportsMediaId) %}
+
+                                                    <img src="{{ sportsMedia.url }}" alt="">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endblock %}
+
+                        {% block page_product_detail_tabs_content_ingredients %}
+                            {% if shopware.config.core.listing.showReview %}
+                                <div class="tab-pane fade show {% if (ratingSuccess == 1) or (ratingSuccess == -1) %}active{% endif %}"
+                                     id="ingredients-tab-pane"
+                                     role="tabpanel"
+                                     aria-labelledby="ingredients-tab">
+                                    <div class="product-detail-description tab-pane-container">
+                                        <div class="row">
+                                            <div class="product-detail-description-text col-md-6" itemprop="description">
+                                               {{ page.product.customFields.custom_detail_ingredients_content|raw }}
+                                            </div>
+                                            <div class="col-md-6 detail-description-image">
+                                                {% if page.product.customFields.custom_detail_ingredients %}
+                                                    {% set sportsMediaId = page.product.customFields.custom_detail_ingredients %}
+                                                    {% set mediaCollection = searchMedia([sportsMediaId], context.context) %}
+                                                    {% set sportsMedia = mediaCollection.get(sportsMediaId) %}
+
+                                                    <img src="{{ sportsMedia.url }}" alt="">
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

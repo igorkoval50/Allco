@@ -1,0 +1,132 @@
+.is-ctl-navigation {
+  .cms-breadcrumb {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background: #f7f7f7;
+    margin: 0;
+    padding:0;
+    .custom-breadcrumb-container {
+      max-width: 1315px;
+      padding-left: 0;
+      padding-right: 0;
+      display: flex;
+    }
+     a.is-active {
+      color: #4a545b;
+      font-weight: bolder;
+    }
+    .breadcrumb-placeholder {
+      .icon-arrow-medium-right {
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          position: relative;
+          width: 9px;
+          height: 15px;
+          background-image: url(../assets/icons/bread-arrow.svg);
+          right: 0;
+          background-repeat: no-repeat;
+          top: 3px;
+        }
+      }
+    }
+    svg {
+      display: none;
+    }
+  }
+  .cms-element-product-listing-actions {
+    margin-bottom: 28px;
+  }
+  .sorting {
+    width: auto;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 8px;
+      height: 4px;
+      background-image: url(../assets/icons/sorting-arrow.svg);
+      right: 15px;
+      background-repeat: no-repeat;
+      top: 17px;
+    }
+    .custom-select:hover {
+      color: #992118;
+      border-color: #992118;
+    }
+    .sorting {
+      background: transparent;
+      width: 100%;
+      min-width: 147px;
+      border-radius: 5px;
+      padding-left: 15px;
+      padding-right: 0;
+      position: relative;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+    }
+  }
+}
+.category-main-image {
+  margin-bottom: 35px;
+  img {
+    max-width: 100%;
+  }
+}
+.custom-listing .filter-panel-item .filter-panel-item-toggle {
+  font-weight: bold;
+  padding: 0 40px 0 20px;
+  min-width: 228px;
+  height: 53px;
+  font-size: 18px;
+  position: relative;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.cms-element-sidebar-filter {
+  .show {
+    .icon-arrow-medium-down {
+      transform: rotate(-180deg);
+      top: 16px;
+      transition-duration: .4s;
+    }
+  }
+  .icon-arrow-medium-down {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    transition-duration: .4s;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 22px;
+      height: 12px;
+      background-image: url(../assets/icons/arrow-filter.svg);
+      background-repeat: no-repeat;
+    }
+    svg {
+      display: none;
+    }
+  }
+  .filter-multi-select-manufacturer, .filter-range {
+    display: none;
+  }
+  .filter-panel-item.show .filter-panel-item-toggle {
+    color: #992118;
+    border-color: #992118;
+  }
+  .filter-panel, .filter-panel-items-container {
+    margin-bottom: 0;
+  }
+}
+
+button, select, input, textarea {
+  overflow: hidden !important;
+  box-shadow: none !important;
+}

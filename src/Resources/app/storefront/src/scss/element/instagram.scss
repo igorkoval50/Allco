@@ -1,0 +1,23 @@
+.cms-block-hl-instagram-feed {
+  padding: 100px 0 83px;
+  text-align: center;
+  background: #363A44;
+  .hlif_title {
+    color: $white;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .hl-instagram-content-wrap {
+    padding: 0 16.4%;
+  }
+  .image-wrap {
+    padding: 7px;
+    margin-right: 5px;
+  }
+  .insta-item:last-child {
+    .image-wrap{
+      margin-right: 0;
+    }
+  }
+}
+

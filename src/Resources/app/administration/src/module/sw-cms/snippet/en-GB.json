@@ -15,6 +15,10 @@
                 },
                 "brands": {
                     "label": "brands image slider"
+                },
+                "imageCategoryText": {
+                    "label-right": "image-right & text-category",
+                    "label-left": "image-left & text-category"
                 }
             }
         }
