@@ -6,6 +6,18 @@ export default class AllcoSwiperSlider extends Plugin {
     init() {
         console.log('Plugin is initialized');
 
+        //stick header
+        window.onscroll = function() {myFunction()};
+        var header = document.querySelector(".nav-main");
+        var sticky = header.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
         let isSwiperExist = document.querySelector('.swiper-container');
         if (isSwiperExist === null)
         {

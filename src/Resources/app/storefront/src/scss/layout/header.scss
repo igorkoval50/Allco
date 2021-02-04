@@ -77,9 +77,51 @@
 
 body {
   .main-navigation-link.active .main-navigation-link-text {
-    border-color: $green;
+    border: none;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      bottom: -45px;
+      background: $green;
+      height: 2px;
+    }
+  }
+  .sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 70px;
+    background: $white;
+    box-shadow: 0 4px 10px -4px rgb(18 18 18 / 20%);
+    .main-navigation-link.active .main-navigation-link-text:before {
+      bottom: -22px;
+    }
+    .container {
+      height: 70px;
+    }
+    .main-navigation-menu {
+      align-items: flex-start;
+      padding-top: 15px;
+    }
+    .header-logo-main-link {
+      overflow: hidden;
+      background: $white;
+      height: 35px;
+      img {
+        height: 40px;
+        object-fit: cover;
+      }
+    }
   }
 }
+
+
 
 .is-act-home {
   .breadcrumb {
