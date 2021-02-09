@@ -40,3 +40,73 @@ svg * {
 body {
   overflow-x: hidden;
 }
+
+.top-30 {
+  margin-top: -30px;
+}
+
+.top-10 {
+  margin-top: -10px;
+}
+
+.top-15 {
+  margin-top: -15px;
+}
+.cms-block-image-cover {
+  position: relative;
+  z-index: 10;
+  .cms-image-container.is-cover {
+    margin-top: -2px;
+  }
+}
+
+.scroll-up-button {
+  .btn-primary {
+    background: #879200;
+    border: 1px solid #879200;
+  }
+}
+
+.top-bar-nav-btn.btn:hover, .top-bar-nav-btn.btn:hover .icon {
+  color: #879200;
+}
+
+.cookie-permission-container {
+
+}
+
+.btn-secondary {
+  color: #fff;
+  border-color: #707070;
+  background: #707070;
+  &:hover {
+    border: 1px solid #707070;
+    background: #707070;
+    opacity: .8;
+  }
+}
+.btn-primary {
+  background-color: #879200;
+  border-color: #879200;
+  &:hover {
+    background-color: #879200;
+    border-color: #879200;
+    opacity: .8;
+  }
+}
+
+a {
+  color: #879200;
+  text-decoration: none;
+  background-color: transparent;
+  &:hover {
+    text-decoration: none;
+    color: #879200;
+    opacity: .8;
+  }
+}
+.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+  background-color: #879200;
+  border-color: #707070;
+}
+

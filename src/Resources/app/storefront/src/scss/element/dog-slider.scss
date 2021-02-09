@@ -1,6 +1,7 @@
 //image slider
 .cms-block-slider-image-text {
-  height: 730px;
+  max-height: 730px;
+  height: auto;
   .col-12 {
     padding: 0;
   }

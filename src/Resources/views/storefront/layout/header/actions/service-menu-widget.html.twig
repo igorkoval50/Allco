@@ -33,7 +33,7 @@
                     </button>
                     {% block layout_header_actions_service_menu_items %}
                       {{ parent() }}
-                        <span class="top-bar-nav-text top-bar-nav-text-right">
+                        <a href="{{ 'header.mapLink'|trans }}" class="top-bar-nav-text top-bar-nav-text-right">
                             <i>
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14.673" height="20.177" viewBox="0 0 14.673 20.177">
                               <defs>
@@ -77,7 +77,7 @@
                             </svg>
                             </i>
                             {{ 'header.map'|trans }}
-                        </span>
+                        </a>
                     {% endblock %}
                 </div>
             {% endblock %}

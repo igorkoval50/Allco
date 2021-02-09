@@ -76,10 +76,82 @@
 }
 
 body {
+  .navigation-flyout.is-open {
+    background: #879200;
+    min-height: 370px;
+    z-index: 1000;
+  }
+  .navigation-flyout-bar {
+    display: none;
+  }
+  .navigation-flyout-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+  }
   .main-navigation-link.active .main-navigation-link-text {
-    border-color: $green;
+    border: none;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      bottom: -48px;
+      background: $green;
+      height: 2px;
+    }
+  }
+  .left-category {
+    .main-navigation-link.active .main-navigation-link-text {
+      &:before {
+        bottom: -45px;
+      }
+    }
+  }
+  .sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 70px;
+    background: $white;
+    box-shadow: 0 4px 10px -4px rgb(18 18 18 / 20%);
+    .main-navigation-menu {
+      max-height: 70px;
+    }
+    .left-category {
+      .main-navigation-link.active .main-navigation-link-text:before {
+        bottom: -17px;
+      }
+    }
+    .right-category {
+      .main-navigation-link.active .main-navigation-link-text:before {
+        bottom: -22px;
+      }
+    }
+    .container {
+      height: 70px;
+    }
+    .main-navigation-menu {
+      align-items: flex-start;
+      padding-top: 15px;
+    }
+    .header-logo-main-link {
+      overflow: hidden;
+      background: $white;
+      height: 35px;
+      img {
+        height: 40px;
+        object-fit: cover;
+      }
+    }
   }
 }
+
+
 
 .is-act-home {
   .breadcrumb {
@@ -170,5 +242,43 @@ body {
     position: relative;
     top: -1px;
 
+  }
+}
+
+
+@media (min-width: 991px) {
+  .sticky {
+    .header-search {
+      top: -103px;
+    }
+  }
+  .main-navigation-menu {
+    position: relative;
+  }
+  .header-search {
+    position: absolute;
+    background: #fff;
+    z-index: 10;
+    right: 113px;
+    top: -75px;
+    padding: 0;
+    margin: 0;
+    .header-search-btn {
+      display: none;
+    }
+    .header-search-input {
+      height: 34px;
+    }
+  }
+}
+
+.top-bar-list-item:hover, .dropdown.show .top-bar-nav-btn, .dropdown.show .top-bar-nav-btn .icon {
+  color: #879200;
+}
+
+.top-bar-nav-text {
+  color: #3a3e4a;
+  &:hover {
+    color: #879200;
   }
 }

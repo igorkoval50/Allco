@@ -1,0 +1,171 @@
+html {
+  .is-ctl-storelocator {
+    #map {
+      height: 84vh !important;
+      min-height: 800px;
+    }
+    .footer-top-wrapper, .footer-main {
+      display: none;
+    }
+    .content-main {
+      .btn {
+        background: #f2f2f2;
+        height: 38px;
+        width: 38px;
+        border-radius: 5px;
+        padding: 0;
+      }
+      .neti-next-store-locator .map-overlay {
+        top: 100px;
+        padding: 0 15px;
+        overflow: hidden;
+        height: 678px;
+      }
+      .container {
+        background: transparent;
+      }
+      .btn {
+        background: #F2F2F2;
+      }
+      .stores-container {
+        .store {
+          background: #F2F2F2;
+          border-radius: 5px;
+          padding: 15px;
+          border-bottom: 0 !important;
+        }
+      }
+      .neti-next-store-locator-filter {
+        border: none !important;
+        .container.mx-3 {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+      h4 {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #3A3E4A;
+        margin-bottom: 5px;
+      }
+      .address {
+        color: #3A3E4A;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      .marker {
+        border: 1px solid #BDBDBD;
+        border-radius: 5px;
+        padding: 0;
+        width: 38px;
+        height: 38px;
+        padding-top: 2px;
+      }
+      .btn-light .icon {
+        color: #646871;
+      }
+      .form-control {
+        height: calc(1.5em + 1.125rem - 1px);
+      }
+    }
+    .content-main > .container .container-main {
+      padding: 0 !important;
+    }
+    .additional-info {
+      strong, a {
+        font-weight: 400;
+        font-size: 12px;
+        color: #3A3E4A;
+        line-height: 18px;
+      }
+    }
+    .filter-container {
+      margin-top: 20px;
+      .custom-select {
+        cursor: pointer;
+        background: transparent;
+        border-radius: 5px;
+        position: relative;
+        &:hover {
+          border-color: #879200;
+          color: #879200;
+        }
+      }
+      .col {
+        padding: 0px 0 12px;
+        border-bottom: 0;
+        position: relative;
+        &:before, &:after {
+          content: "";
+          left: -15px;
+          right: -15px;
+          background: #BDBDBD;
+          height: 1px;
+          width: calc(100% + 30px);
+          position: absolute;
+          display: block;
+          bottom: -8px;
+        }
+        &:after {
+          left: 0;
+          width: 100%;
+          height: 50px;
+          background: #f2f2f2;
+          bottom: 2px;
+          border-radius: 0;
+          z-index: 5;
+        }
+      }
+      .form-group {
+        background: #f2f2f2;
+        margin: 0;
+        padding: 10px 10px;
+        border-radius: 5px;
+        position: relative;
+        margin-top: -6px;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 22px;
+          height: 12px;
+          background-image: url(../assets/icons/arrow-filter.svg);
+          background-repeat: no-repeat;
+          right: 20px;
+          bottom: 22px;
+        }
+        label {
+          font-weight: bold;
+        }
+      }
+      .btn-outline-secondary, .btn-secondary {
+        display: none;
+      }
+      .buttons.d-flex.flex-row.justify-content-between {
+        padding: 0 10px;
+        .btn-secondary {
+          display: none;
+        }
+        .btn-primary {
+          width: 100%;
+          background: #879200;
+          z-index: 10;
+          height: 35px;
+        }
+      }
+    }
+    .neti-next-store-locator .search-container .filter-container .header {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+      width: 69px;
+      background: #f2f2f2;
+      border-radius: 5px;
+      padding-left: 10px;
+      padding-top: 5px;
+      height: 32px;
+      margin-bottom: 0;
+      border: none;
+    }
+  }
+}

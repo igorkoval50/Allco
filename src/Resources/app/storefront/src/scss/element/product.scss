@@ -133,6 +133,7 @@
   padding-bottom: 90px;
   background: #F7F7F7;
   padding-top: 0;
+  position: relative;
   .tns-ovh {
     overflow: hidden;
     padding: 20px;
@@ -142,11 +143,18 @@
 .product-slider {
   max-width: 1436px;
   margin: 0 auto;
+  position: static;
 }
 
 .product-slider.has-nav {
   padding-left: 60px;
   padding-right: 60px;
+  .product-slider-controls-prev {
+    left: 60px;
+  }
+  .product-slider-controls-next {
+    right: 60px;
+  }
 }
 
 .custom-listing {
@@ -186,5 +194,13 @@
     .card-body {
       padding: 20px 20px 35px 20px;
     }
+  }
+}
+
+.product-box {
+  .btn-buy:not(:disabled):not(.disabled):active {
+    background-color: transparent;
+    border-color: transparent;
+    color: #879200;
   }
 }

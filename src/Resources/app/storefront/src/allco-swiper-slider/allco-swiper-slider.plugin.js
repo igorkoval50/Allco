@@ -1,10 +1,21 @@
 import Plugin from 'src/plugin-system/plugin.class';
-import Swiper, { Navigation, Pagination } from '@swiper';
-Swiper.use([Navigation, Pagination]);
+import Swiper from '@swiper/bundle';
 
 export default class AllcoSwiperSlider extends Plugin {
     init() {
         console.log('Plugin is initialized');
+
+        //stick header
+        window.onscroll = function() {myFunction()};
+        var header = document.querySelector(".nav-main");
+        var sticky = header.offsetTop;
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
 
         let isSwiperExist = document.querySelector('.swiper-container');
         if (isSwiperExist === null)
@@ -19,10 +30,31 @@ export default class AllcoSwiperSlider extends Plugin {
                 slidesPerView: 5,
                 spaceBetween: 30,
                 freeMode: true,
+                loop: false,
+                loopFillGroupWithBlank: true,
+                watchSlidesVisibility: true,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+                    },
+                    576: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    992: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                    1025: {
+                        slidesPerView: 5,
+                        spaceBetween: 30,
+                    },
+                }
             });
 
 
@@ -87,10 +119,31 @@ export default class AllcoSwiperSlider extends Plugin {
                 slidesPerView: 5,
                 spaceBetween: 30,
                 freeMode: true,
+                loop: false,
+                loopFillGroupWithBlank: true,
+                watchSlidesVisibility: true,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+                    },
+                    576: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    992: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                    1025: {
+                        slidesPerView: 5,
+                        spaceBetween: 30,
+                    },
+                }
             });
 
 
@@ -114,10 +167,31 @@ export default class AllcoSwiperSlider extends Plugin {
                 slidesPerView: 5,
                 spaceBetween: 30,
                 freeMode: true,
+                loop: false,
+                loopFillGroupWithBlank: true,
+                watchSlidesVisibility: true,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 3,
+                        spaceBetween: 15,
+                    },
+                    576: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                    992: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                    1025: {
+                        slidesPerView: 5,
+                        spaceBetween: 30,
+                    },
+                }
             });
 
             const swiperPrevTwo = document.getElementById('swiperPrevTwo');
